@@ -5,7 +5,7 @@ declare(strict_types=1);
 class Robot
 {
     private string $name;
-    static private array $namesUsed = [];
+    private static array $namesUsed = [];
 
     public function __construct()
     {
