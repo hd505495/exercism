@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 class Robot
 {
-    private string $name;
+    private ?string $name = null;
     private static array $namesUsed = [];
 
     public function __construct()
@@ -14,12 +14,12 @@ class Robot
 
     public function getName(): string
     {
-        return $this->name;
+        return $this->name ?? $this->generateName();
     }
 
     public function reset(): void
     {
-        $this->name = $this->generateName();
+        unset($this->name);
     }
 
     private function generateName(): string
