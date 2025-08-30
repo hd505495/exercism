@@ -25,6 +25,8 @@ function encode(string $input): string
         }
     }
 
+    array_map()
+
     for ($j = 0; $j < count($tracker); $j++) {
         if ($tracker[$j]['freq'] === 1) {
             $output .= $tracker[$j]['val'];
